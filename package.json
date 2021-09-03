@@ -4,8 +4,8 @@
   "description": "Site OhMyFood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./src/css/styles.css --style compressed",
-    "prefix": "postcss ./src/css/styles.css --use autoprefixer -d ./src/css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./src/css/main.css --style compressed",
+    "prefix": "postcss ./src/css/main.css --use autoprefixer -d ./src/css/"
   },
   "repository": {
     "type": "git",

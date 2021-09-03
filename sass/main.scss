@@ -1,0 +1,65 @@
+@use '../sass/Layout/header';
+@import '../sass/Utils/variables';
+@import '../sass/Base/typography';
+@import '../sass/Utils/fonctions';
+
+* {
+    font-family: map-get($font, text);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+    &__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-color-secondary;
+        height: 3rem;
+    }
+        & i {
+            margin-left: 3rem;
+            margin-right: 1rem;
+        }
+        & input {
+            background-color: $bg-color-secondary;
+            border: none;
+            font-size: map-get($font-size, text);
+        }
+
+    &__pres {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        @include bg-color-primary;
+        height: 17rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+        color: lighten(black, 40%);
+    }
+        h1 {
+            color: black;
+            font-size: 1.85rem;
+            margin: 1rem;
+        }
+        a {
+            display: block;
+            margin: auto;
+            border-radius: 50px;
+            width: 13.5rem;
+            height: 3.1rem;
+            background: linear-gradient(-10deg, $color-primary, 50%, $color-secondary);
+            color: white;
+            font-size: map-get($font-size, text);
+        }
+}

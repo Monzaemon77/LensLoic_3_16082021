@@ -1,0 +1,17 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(/src/fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/src/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+$font: (title:'Shrikhand', text:'Roboto');
+
+$font-size: (text:1rem)
