@@ -3,6 +3,10 @@
 @import '../sass/Base/typography';
 @import '../sass/Utils/fonctions';
 
+body {
+    margin: 0rem;
+}
+
 * {
     font-family: map-get($font, text);
 }
@@ -52,6 +56,11 @@ img {
             font-size: 1.85rem;
             margin: 1rem;
         }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
         a {
             display: block;
             margin: auto;
@@ -61,5 +70,50 @@ img {
             background: linear-gradient(-10deg, $color-primary, 50%, $color-secondary);
             color: white;
             font-size: map-get($font-size, text);
+            @include shadow;
+        }
+
+    &__tuto {
+        height: 20rem;
+        margin: 3rem 1rem 0rem 1rem;
+    }
+        &__tuto__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 16rem;
+            padding: 0rem;
+            div:nth-child(3) {
+                @include bg-color-pink;
+                i {
+                    color: $color-primary;
+                }
+            }
+        }
+        &__tuto__block {
+            display: grid;
+            grid-template-columns: 0.2fr 0.6fr 3fr;
+            align-items: center;
+            height: 4rem;
+            @include bg-color-primary;
+            @include shadow;
+            border-radius: 20px;
+            i {
+                color: lighten(black, 40%);
+                margin-left: 1.5rem;
+           }
+        }
+        &__tuto__block__number {
+            color: white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            padding: 0.1rem;
+            font-size: 0.9rem;
+            text-align: center;
+            position: relative;
+            right: 0.5rem;
+        }
+        &__tuto__block__text {
+            font-weight: bold;
         }
 }

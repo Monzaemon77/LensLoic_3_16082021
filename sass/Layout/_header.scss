@@ -1,8 +1,11 @@
 header {
     text-align: center;
-    box-shadow: 0px 2px 1px black;
+    box-shadow: 0px 2px 5px darken(#eaeaea, 20%);
+    position: relative;
+
 }
 
 header img {
     width: 40%;
+    margin-bottom: 0.5rem;
 }
