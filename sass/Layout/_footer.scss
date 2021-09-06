@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: lighten(black, 18%);
+    color: white;
+    padding: 2rem 1rem 1rem 1.5rem;
+    .footer__link {
+        margin-bottom: 1rem;
+        :nth-child(3) {
+            display: flex;
+        }
+    }
+    a {
+        display: grid;
+        grid-template-columns: 0.08fr 1fr;
+        text-decoration: none;
+        margin-top: 0.5rem;
+        color: white;
+    }
+    img {
+        width: 28%;
+        margin-bottom: 1rem;
+        filter: invert(100%);
+    }
+}

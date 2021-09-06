@@ -1,4 +1,5 @@
 @use '../sass/Layout/header';
+@use '../sass/Layout/footer';
 @import '../sass/Utils/variables';
 @import '../sass/Base/typography';
 @import '../sass/Utils/fonctions';
@@ -19,6 +20,10 @@ img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+header i {
+    visibility: hidden;
 }
 
 .intro {
@@ -116,4 +121,38 @@ img {
         &__tuto__block__text {
             font-weight: bold;
         }
+}
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80rem;
+    @include bg-color-primary;
+    margin-top: 3rem;
+    padding: 0rem 1rem 3rem 1rem;
+
+    h2 {
+        margin: 3rem 0rem 0rem 0rem;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.3rem;
+        overflow: hidden;
+        @include shadow;
+        img {
+            height: 12rem;
+        }
+    }
+    &__cards__bottom {
+        display: grid;
+        grid-template-columns: 3fr 0.4fr;
+        align-items: center;
+    }
+    &__cards__text {
+        margin: 1rem 0rem 0rem 1rem;
+        p {
+            margin-top: 0.3rem;
+        }
+    }
 }
