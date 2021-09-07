@@ -2,10 +2,11 @@
 @use '../sass/Layout/footer';
 @import '../sass/Utils/variables';
 @import '../sass/Base/typography';
-@import '../sass/Utils/fonctions';
+@import '../sass/Utils/mixins';
 
 body {
-    margin: 0rem;
+    margin: auto;
+    max-width: 425px;
 }
 
 * {
@@ -67,15 +68,7 @@ header i {
         }
 
         a {
-            display: block;
-            margin: auto;
-            border-radius: 50px;
-            width: 13.5rem;
-            height: 3.1rem;
-            background: linear-gradient(-10deg, $color-primary, 50%, $color-secondary);
-            color: white;
-            font-size: map-get($font-size, text);
-            @include shadow;
+            @include button;
         }
 
     &__tuto {
@@ -134,20 +127,48 @@ header i {
     h2 {
         margin: 3rem 0rem 0rem 0rem;
     }
+    a {
+        color: black;
+        height: 12rem;
+    }
     &__cards {
         display: flex;
         flex-direction: column;
         border-radius: 1.3rem;
         overflow: hidden;
+        height: 17rem;
         @include shadow;
         img {
+            position: relative;
+            z-index: 1;
             height: 12rem;
         }
+        &__img {
+            height: 12rem;
+            overflow: hidden;
+        }
+    .restaurant__cards__new {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        bottom: 11rem;
+        left: 17.5rem;
+        background-color: $color-tertiary;
+        font-weight: bold;
+        color: darken($color-tertiary , 40%);
+        width: 6rem;
+        height: 2rem;
+    }
     }
     &__cards__bottom {
         display: grid;
         grid-template-columns: 3fr 0.4fr;
         align-items: center;
+        a {
+            height: 5rem;
+        }
     }
     &__cards__text {
         margin: 1rem 0rem 0rem 1rem;
