@@ -41,11 +41,19 @@ h2::after {
     border-bottom: 4px solid $color-tertiary;
 }
 
+main img {
+    height: 25rem;
+}
+
 .menu {
     @include bg-color-primary;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     padding: 0rem 1rem 5rem 1rem;
+    z-index: 2;
+    position: relative;
+    bottom: 5.5rem;
+    margin-bottom: -5.5rem;
     &__title {
         display: grid;
         grid-template-columns: 1fr 0.15fr;
@@ -93,4 +101,8 @@ h2::after {
 button {
     @include button;
     margin-top: 3rem;
+    &:hover {
+        filter: brightness(110%);
+        box-shadow: 0px 4px 10px darken(#eaeaea, 60%);
+    }
 }
