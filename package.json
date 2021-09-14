@@ -1,0 +1,26 @@
+{
+  "name": "lensloic_3_16082021",
+  "version": "1.0.0",
+  "description": "Site OhMyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./src/css/main.css ./sass/menu.scss:./src/css/menu.css --style compressed",
+    "prefix": "postcss ./src/css/main.css --use autoprefixer -d ./src/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Monzaemon77/LensLoic_3_16082021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Monzaemon77/LensLoic_3_16082021/issues"
+  },
+  "homepage": "https://github.com/Monzaemon77/LensLoic_3_16082021#readme",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "autoprefixer": "^10.3.2",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1"
+  }
+}

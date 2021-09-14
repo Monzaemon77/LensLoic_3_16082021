@@ -1,0 +1,108 @@
+@use '../sass/Layout/header';
+@use '../sass/Layout/footer';
+@import '../sass/Utils/variables';
+@import '../sass/Base/typography';
+@import '../sass/Utils/mixins';
+
+body {
+    margin: auto;
+    max-width: 425px;
+}
+
+* {
+    font-family: map-get($font, text);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    box-shadow: none;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: lighten(black, 40%);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    margin: 0rem;
+    width: 10%;
+    border-bottom: 4px solid $color-tertiary;
+}
+
+main img {
+    height: 25rem;
+}
+
+.menu {
+    @include bg-color-primary;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 0rem 1rem 5rem 1rem;
+    z-index: 2;
+    position: relative;
+    bottom: 5.5rem;
+    margin-bottom: -5.5rem;
+    &__title {
+        display: grid;
+        grid-template-columns: 1fr 0.15fr;
+        align-items: center;
+        h1 {
+            font-family: map-get($font, title);
+            font-size: 2rem;
+        }
+    }
+    &__main {
+        margin-top: 3rem;
+    }
+    &__desert {
+        margin-top: 3rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 0.2fr;
+        margin-bottom: 1rem;
+        
+        border-radius: 1.2rem;
+        background-color: white;
+    }
+    &__text {
+        padding: 0.7rem 0rem 0.7rem 0.7rem;
+        p {
+        margin: 0.5rem 0rem 0rem 0rem;
+        color: lighten(black, 40%);
+        }
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    &__price {
+        padding: 2.7rem 0rem 0rem 0.5rem;
+        font-weight: bold;
+    }
+}
+
+button {
+    @include button;
+    margin-top: 3rem;
+    &:hover {
+        filter: brightness(110%);
+        box-shadow: 0px 4px 10px darken(#eaeaea, 60%);
+    }
+}
