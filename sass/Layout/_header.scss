@@ -2,6 +2,10 @@ header {
     text-align: center;
     box-shadow: 0px 2px 5px darken(#eaeaea, 20%);
     position: relative;
+    opacity: 0;
+    animation: loadingend 0.1s;
+    animation-delay: 2.9s;
+    animation-fill-mode: both;
     i {
         position: relative;
         right: 6rem;
