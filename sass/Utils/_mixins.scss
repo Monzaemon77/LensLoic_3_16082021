@@ -22,3 +22,30 @@
     font-size: map-get($font-size, text);
     @include shadow;
 }
+
+@keyframes loadingend {
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes loadingend-0 {
+    
+    0% {
+        transform: rotate(0deg);
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
