@@ -70,8 +70,8 @@ main img {
             width: 100%;
             height: 100%;
             margin: auto;
-          }
-          input {
+        }
+        input {
             position: relative;
             left: 0.2rem;
             top: 1rem;
@@ -121,7 +121,13 @@ main img {
     }
     &__list {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
+        
+    }
+    @for $i from 1 through 10 {
+        .menu__cards:nth-child(#{$i}n) {
+            animation-delay: #{$i * 0.5}s;
+        }
     }
     &__cards {
         display: flex;
@@ -131,6 +137,8 @@ main img {
         margin-top: 1rem;
         border-radius: 1rem;
         background-color: white;
+        animation: fadein 2s;
+        animation-fill-mode: backwards;
         input {
             appearance: none;
             width: 100%;
@@ -140,12 +148,12 @@ main img {
             cursor: pointer;
             left: -0.3rem;
         }
-        input:checked ~ .menu__cards .menu__icon {
+        input:checked ~ .menu__icon {
             margin-right: 0;
             transition-duration: 0.5s;
             transition-timing-function: ease;
         }
-        input:checked ~ .menu__cards i {
+        input:checked ~ i {
             margin-right: 0;
             transition-duration: 0.5s;
             transition-timing-function: ease;
@@ -209,7 +217,6 @@ main img {
         font-weight: bold;
     }
 }
-
 button {
     @include button;
     margin-top: 3rem;

@@ -184,6 +184,12 @@ header i {
       color: darken($color-tertiary, 40%);
       width: 6rem;
       height: 2rem;
+      @media (max-width:375px) {
+        left: 15rem;
+      }
+      @media (max-width:320px) {
+        left: 11rem;
+      }
     }
   }
   &__cards__bottom {
