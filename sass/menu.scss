@@ -82,8 +82,11 @@ main img {
             opacity: 0;
             cursor: pointer;
             z-index: 3;
-            @media (max-width: 375px) {
-                top: 1.7rem;
+            @media (max-width:400px) {
+                top: 1.8rem;
+            }
+            @media (max-width:375px) {
+                top: 1.8rem;
             }
         }
         input:checked ~ .far {
@@ -98,6 +101,9 @@ main img {
             position: relative;
             bottom: 0.7rem;
             left: 0.4rem;
+            @media (max-width:400px) {
+                top: 0.1rem;
+            }
             @media (max-width:375px) {
                 top: 0.1rem;
                 right: 0.5rem;
@@ -112,9 +118,13 @@ main img {
             background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @media (max-width:400px) {
+                left: 0.4rem;
+                bottom: 1.5rem;
+            }
             @media (max-width:375px) {
                 position: relative;
-                left: 0.5rem;
+                left: 0.4rem;
                 bottom: 1.5rem;
               }
             @media (max-width:320px) {
