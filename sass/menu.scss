@@ -6,7 +6,9 @@
 
 body {
     margin: auto;
-    max-width: 425px;
+    @media (max-width: 768px) {
+        max-width: 425px;
+      }
 }
 
 * {
@@ -74,19 +76,17 @@ main img {
             margin: auto;
         }
         input {
-            position: relative;
-            left: 0.2rem;
-            top: 1rem;
+            position: absolute;
+            top: 2rem;
+            right: 6.9rem;
             height: 1.5rem;
             width: 1.5rem;
             opacity: 0;
             cursor: pointer;
             z-index: 3;
-            @media (max-width:400px) {
-                top: 1.8rem;
-            }
-            @media (max-width:375px) {
-                top: 1.8rem;
+            @media (max-width:768px) {
+                top: 2.3rem;
+                right: 1.8rem;
             }
         }
         input:checked ~ .far {
@@ -98,37 +98,26 @@ main img {
             opacity: 1;
         }
         .far {
-            position: relative;
-            bottom: 0.7rem;
-            left: 0.4rem;
-            @media (max-width:400px) {
-                top: 0.1rem;
-            }
-            @media (max-width:375px) {
-                top: 0.1rem;
-                right: 0.5rem;
+            position: absolute;
+            top: 2.1rem;
+            right: 7.1rem;
+            @media (max-width:768px) {
+                top: 2.5rem;
+                right: 2rem;
             }
         }
         .fas {
-            position: relative;
-            bottom: 0.7rem;
-            right: 1.1rem;
+            position: absolute;
+            top: 2.1rem;
+            right: 7.1rem;
             opacity: 0;
             transition-duration: 0.5s;
             background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            @media (max-width:400px) {
-                left: 0.4rem;
-                bottom: 1.5rem;
-            }
-            @media (max-width:375px) {
-                position: relative;
-                left: 0.4rem;
-                bottom: 1.5rem;
-              }
-            @media (max-width:320px) {
-                left: 0.4rem;
+            @media (max-width:768px) {
+                top: 2.5rem;
+                right: 2rem;
             }
         }
         .fa-heart {
@@ -230,6 +219,7 @@ main img {
         border-radius: 50%;
         background: white;
         transition-duration: 0.5s;
+        transition-timing-function: ease;
     }
     &__name {
         font-weight: bold;

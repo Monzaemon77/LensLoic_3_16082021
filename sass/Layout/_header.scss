@@ -7,16 +7,14 @@ header {
     animation-delay: 2.9s;
     animation-fill-mode: both;
     i {
-        position: relative;
-        right: 6rem;
-        bottom: 1rem;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
         color: black;
-        @media (max-width:375px) {
-            right: 5rem;
-        }
-        @media (max-width:320px) {
-            right: 4rem;
-            bottom: 0.6rem;
+        font-size: 2rem;
+        @media (max-width: 768px) {
+            top: 1rem;
+            font-size: 1rem;
         }
     }
 }

@@ -21,6 +21,9 @@ footer {
         text-decoration: none;
         margin-top: 0.5rem;
         color: white;
+        @media (min-width:769px) {
+            grid-template-columns: 0.04fr 1fr;
+        }
     }
     img {
         width: 28%;
